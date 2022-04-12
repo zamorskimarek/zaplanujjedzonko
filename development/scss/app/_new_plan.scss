@@ -1,0 +1,55 @@
+.input-week-number {
+  width: 30px;
+  height: 30px;
+  margin-left: 20px;
+  font-size: 1rem;
+  color: $color-header-and-text-in-columns;
+}
+
+.plan-table-container {
+  position:relative;
+  height: 65%;
+  overflow:auto;
+  margin-top:20px;
+}
+
+.plan-table {
+  width: 100%;
+  //height: calc(50vh - 140px);
+  color: $color-side-panel-nav;
+  table-layout: fixed;
+  border-collapse: collapse;
+  overflow: scroll;
+  td {
+    width: 100%;
+    height: 2.6428rem;
+    text-align: center;
+    &:first-child {
+      font-weight: $font-weight-semibold;
+      font-size: 1.2857rem;
+    }
+    &:last-child {
+      justify-content: center;
+    }
+  }
+  tr {
+    border-bottom: 2px solid $color-text-in-tables;
+    margin: 0 auto;
+  }
+  thead {
+    height: 70px;
+    width: 100%;
+    th{
+      font-size: 1.7142rem;
+      font-weight: $font-weight-semibold;
+      width: 16.66%;
+    }
+  }
+  &__th-with-content {
+    border-top: 2px solid $color-text-in-tables;
+    vertical-align: middle;
+  }
+
+}
+
+

@@ -1,0 +1,9 @@
+.app-header{
+  background-color: $color-header-and-text-in-columns;
+  height: 80px;
+  width: 100%;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: inset 0px -2px 0 0.5px black;
+}

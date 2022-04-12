@@ -1,0 +1,57 @@
+//block size
+.app{
+  &-container{
+    display: flex;
+  }
+  &-main{
+    display: flex;
+    width: 100%;
+  }
+  &-add{
+    cursor: pointer;
+    width: 180px;
+    height: 160px;
+    margin-right:20px;
+    background-color: $color-screen-background;
+    border: dashed 2px $color-success-messages;
+    color: $color-success-messages;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    &__span{
+      margin-top: 20px;
+      font-weight: $font-weight-semibold;
+      font-size: 1.5rem;
+    }
+    &__square{
+      width: 55px;
+      height: 55px;
+      border:  solid 6px $color-success-messages;
+      border-radius: 8px;
+    }
+  }
+}
+//button style
+.app {
+  &-add{
+    &__square {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &__cross{
+        &__horizontal, &__vertical{
+          position:absolute;
+          background-color: $color-success-messages;
+          width: 35px;
+          height: 5px;
+        }
+        &__vertical{
+          transform: rotate(90deg);
+        }
+      }
+    }
+
+  }
+}

@@ -1,0 +1,19 @@
+.app{
+  &-logo {
+    margin-left: 20px;
+
+    &__start, &__end {
+      font-family: $font-logo;
+      font-size: 1.7142rem;
+    }
+
+    &__start {
+      color: $color-screen-background;
+    }
+
+    &__end {
+      color: $color-buttons-distinction-and-screenheader;
+      font-weight: $font-weight-bold;
+    }
+  }
+}

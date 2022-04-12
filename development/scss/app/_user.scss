@@ -1,0 +1,18 @@
+.app {
+  &-user {
+    margin-right: 40px;
+    display: flex;
+    align-items: center;
+
+    &__name {
+      color: $color-screen-background;
+      font-weight: $font-weight-bold;
+      font-size: 2.1428rem;
+      margin-right: 20px;
+    }
+    &__logo {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}

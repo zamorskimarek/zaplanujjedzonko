@@ -1,0 +1,34 @@
+.about_author {
+  padding: 6rem 0;
+  background-color: $color-screen-background;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.about_author__photo {
+  width: 350px;
+  height: auto;
+}
+
+.about_author__info {
+  padding-left: 6rem;
+
+  &--name {
+    font-size: 2.5714rem;
+    padding-bottom: 2rem;
+  }
+
+  &--text {
+    font-size: 1.7142rem;
+
+    strong {
+      font-weight: $font-weight-bold;
+    }
+  }
+}

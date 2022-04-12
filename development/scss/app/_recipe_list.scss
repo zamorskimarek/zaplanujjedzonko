@@ -1,0 +1,85 @@
+.recipe_list__table,
+.plan_list__table{
+  padding: 1rem;
+
+  table-layout: fixed;
+  border-collapse: collapse;
+
+  tr {
+    border: 1px solid $color-text-in-tables;
+    border-left: none;
+    border-right: none;
+    color: $color-text-in-tables;
+
+    th, td {
+      padding: 1rem 0;
+      text-align: left;
+
+      &:nth-child(1) {
+        width: 50px;
+      }
+
+      &:nth-of-type(2) {
+        width: 200px;
+      }
+
+      &:nth-child(3) {
+        width: 700px;
+      }
+
+      &:nth-of-type(4) {
+        width: 100px;
+      }
+    }
+  }
+}
+
+.plan_list__table {  //odsuwa troszkę tytul kolumny w tabeli
+  tr th:nth-of-type(4) {
+    width: 130px;
+  }
+}
+
+.recipe_list__table thead,
+.plan_list__table thead {
+    font-weight: $font-weight-bold;
+    font-size: 1.4285rem;
+    display:block;
+    width: 100%;
+    overflow: auto;
+
+    tr {
+      color: $color-side-panel-nav;
+      display: block;
+    }
+}
+
+.recipe_list__table tbody,
+.plan_list__table tbody {
+    display:block;
+    width: 100%;
+    overflow: auto;
+    height: 420px;
+
+    tr td {
+        font-size: 1.1428rem;
+    }
+}
+
+
+td:last-child {
+  width: 84px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .action_icon::before {
+    top: -10px;
+  }
+}
+
+//Scrollbar
+// i have removed this section - this is because my previous code from carousel was hiding
+// ALL of scrollbars on page - my fault, havent seen it before. fixed it in carousel scss so your fix here
+// is not necessary. sorry for extra work Asia :(

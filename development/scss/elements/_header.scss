@@ -1,0 +1,39 @@
+.header {
+  background-color: $color-header-and-text-in-columns;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding-block: 30px;
+    .logo {
+      color: $color-screen-background;
+      font-family: $font-logo;
+      font-weight: $font-weight-medium;
+      font-size: 3.571428rem;
+      span {
+        color: $color-buttons-distinction-and-screenheader;
+        font-weight: $font-weight-extrabold;
+      }
+    }
+    .menu {
+      &__list {
+        display: flex;
+        justify-content: space-between;
+        font-size: 1.142857rem;
+        &__item {
+          padding-inline: 20px;
+          a {
+            color: $color-screen-background;
+            &:hover {
+              color: $color-buttons-distinction-and-screenheader;
+            }
+          }
+        }
+      }
+    }
+  }
+}

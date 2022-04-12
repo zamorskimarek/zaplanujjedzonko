@@ -1,0 +1,109 @@
+
+
+.recipe-description {
+  font-size: 24px;
+  font-weight: $font-weight-medium;
+  color: $color-side-panel-nav;
+  padding-left: 7px;
+  &__part {
+    display: flex;
+    margin-bottom: 15px;
+  }
+}
+
+.input-text-recipe {
+  width: 80%;
+  height: 30px;
+  margin-left: 20px;
+  font-size: 1rem;
+  color: $color-header-and-text-in-columns;
+}
+
+.input-text-ingredients {
+  width: 80%;
+  height: 30px;
+  resize: none;
+  font-size: 1rem;
+  color: $color-header-and-text-in-columns;
+  margin-inline: 10px;
+}
+
+.input-textarea__description {
+  font-size: 1rem;
+  color: $color-header-and-text-in-columns;
+  width: 80%;
+  height: 80px;
+  margin-left: 44px;
+  resize: none;
+  }
+
+.input-textarea__instructions {
+  width: 100%;
+  height: 80px;
+  resize: none;
+  font-size: 1.3rem;
+  color: $color-header-and-text-in-columns;
+  margin-inline: 10px;
+  resize: none;
+}
+
+
+.recipe-partials {
+  display: flex;
+  justify-content: space-between;
+  font-size: 24px;
+  font-weight: $font-weight-medium;
+  color: $color-side-panel-nav;
+  padding-top: 20px;
+
+  &__instructions {
+    width: 45%;
+    h3 {
+      border-bottom: 2px solid $color-text-in-tables;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+      padding-left: 7px;
+    }
+    &__inputs {
+      display: flex;
+      justify-content: space-between;
+      height: 120px;
+    }
+    &__lists {
+      width: 100%;
+      overflow-y: auto;
+      height: 200px;
+    }
+  }
+
+  ol {
+    list-style: decimal;
+    margin-left: 30px;
+  }
+  ul {
+    list-style: disc;
+    margin-left: 30px;
+  }
+  li {
+    font-size: 1.3rem;
+    line-height: 1.4rem;
+    &:first-child {
+      padding-top: 5px;
+    }
+
+    i {
+      width: 24px;
+      margin-left: 5px;
+      margin-right: 20px;
+      &::before {
+        font-size: 1.4rem;
+      }
+    }
+  }
+}
+
+.btn-recipe-save {
+  font-size: 1.3rem;
+  font-weight: $font-weight-semibold;
+  padding: 10px;
+}

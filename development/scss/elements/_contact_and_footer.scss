@@ -1,0 +1,74 @@
+//contact section
+.contact{
+  .container{
+    display: flex;
+  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-side-panel-nav;
+  width: 100%;
+  &__column{
+    width: 33%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color:$color-screen-background;
+    font-weight: $font-weight-regular;
+    font-size: 1.7142rem;
+    &__header{
+      font-size: 2.2857rem;
+      margin-bottom: 10px;
+    }
+    &__list{
+      list-style-type: disc;
+    }
+    &__form{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+    &__form__input__text{
+      box-sizing: border-box;
+      width: 60%;
+      height: 40px;
+    }
+    &__form__btn{
+      height: 40px;
+      width: 90px;
+    }
+    &__icons{
+      width: 100%;
+    }
+    &__icons__img{
+      margin-top: 20px;
+      margin-left: 50px;
+      width: 35px;
+      height: 35px;
+    }
+    &__paragraph{
+      margin: 10px;
+    }
+  }
+}
+
+//footer section
+
+.footer{
+  width: 100%;
+  height: 65px;
+  background-color: $color-header-and-text-in-columns;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  &__copyright{
+    color:$color-screen-background;
+    padding: 5px;
+  }
+  &__link{
+    color:$color-buttons-distinction-and-screenheader;
+  }
+}

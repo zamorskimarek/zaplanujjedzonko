@@ -1,0 +1,43 @@
+.cta {
+  background-color: $color-header-and-text-in-columns;
+  display: flex;
+  justify-content: center;
+  height: 250px;
+  width: 100vw;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+}
+
+.cta__info {
+  color: $color-screen-background;
+  padding-bottom: 2rem;
+  width: 60%;
+
+  h3 {
+    font-size: 2.5714rem;
+    padding: 20px 0 20px 0;
+  }
+
+  p {
+    font-size: 1.7142rem;
+  }
+}
+
+.cta__btn {
+  font-size: 1.4285rem;
+  font-weight: $font-weight-bold;
+
+  padding: 0.4285rem 0.7142rem;
+  text-align: center;
+  width: 218px;
+  height: 55px;
+
+  a {
+    color: $color-screen-background;
+  }
+}

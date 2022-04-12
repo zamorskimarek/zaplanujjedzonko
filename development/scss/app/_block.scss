@@ -1,0 +1,50 @@
+.app {
+  &-main {
+    &__block{
+      width: calc(100% - 360px);
+      height: 160px;
+      padding-left: 20px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      font-weight: $font-weight-semibold;
+      font-size: 1rem;
+
+      &__info, &__warning, &__correct{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 40px;
+        background-color: $color-screen-background;
+        &__icon{
+          font-size: 2.1428rem;
+          padding-right: 5px;
+        }
+        &__xmark{
+          font-size: 1.4285rem;
+          align-self: start;
+        }
+      }
+      &__info{
+        color: $color-info-messages;
+        border: dashed 2px $color-info-messages;
+      }
+      &__warning{
+        color: $color-warning-messages;
+        border: dashed 2px $color-warning-messages;
+      }
+      &__correct{
+        color: $color-success-messages;
+        border: dashed 2px $color-success-messages;
+      }
+      &__text{
+        margin: 5px;
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+}
+

@@ -1,0 +1,33 @@
+.newsletter {
+  background-color: $color-side-panel-nav;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 0;
+
+  &__container {
+
+    display: flex;
+    justify-content: space-between;
+
+    h3 {
+      font-size: 3.4285rem;
+      color: $color-screen-background;
+    }
+  }
+}
+
+.newsletter__form {
+  display: flex;
+
+  &--input {
+    width: 24rem;
+  }
+
+  &--btn {
+    border: none;
+    box-shadow: none;
+    font-size: 1.4285rem;
+    padding: 0 2rem;
+  }
+}

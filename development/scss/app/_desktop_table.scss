@@ -1,0 +1,77 @@
+//table
+
+.app {
+  &-main {
+    &__table__block{
+      background-color: $color-screen-background;
+      margin-top:25px;
+      padding-bottom: 5px;
+      height: 400px;
+      color:$color-buttons-distinction-and-screenheader;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      border: 1px $color-text-in-tables dotted;
+    }
+    &__table {
+      width: 100%;
+      height: 100%;
+      padding: 25px;
+      border-collapse: collapse;
+      border-bottom: 1px $color-text-in-tables solid;
+      color: $color-text-default;
+      text-align: left;
+      &__header{
+        padding: 5px 0;
+        width: 100%;
+        background-color: $color-screen-background;
+        font-size: 1.7142rem;
+        color:$color-buttons-distinction-and-screenheader;
+        font-weight: $font-weight-semibold;
+      }
+      & th {
+        vertical-align: middle;
+        height: 30px;
+        padding-left: 10px;
+        font-size: 1.2857rem;
+        color: $color-text-default;
+        font-weight: $font-weight-bold;
+      }
+      & td {
+        vertical-align: middle;
+        color: $color-text-in-tables;
+        border-bottom: 1px $color-text-in-tables solid;
+        width: 14%;
+        padding-right: 5px;
+        padding-left: 10px;
+      }
+      & td:first-child{
+        width: 16%;
+      }
+      & tr:first-child{
+        border-top: 1px $color-text-in-tables solid;
+      }
+      td:last-child{
+        display: table-cell;
+        // poprzez stylowanie pliku recipe_list nadpisywało mi tutaj
+      }
+      &__button__block{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        & span{
+          cursor: pointer;
+          width: 50px;
+        }
+      }
+      &__button{
+        padding:10px;
+
+      }
+    }
+  }
+}
+.app-main__table__wrong {
+  color: green;
+}
+

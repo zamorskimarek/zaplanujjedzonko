@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<title>Zaplanuj Jedzonko</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="./css/main.css" />
+</head>
+<body class="app-background">
+  <header class="app-header">
+  <div class="app-logo">
+    <span class="app-logo__start">Zaplanuj </span><span class="app-logo__end">Jedzonko</span>
+  </div>
+  <div class="app-user">
+    <span id="userName" class="app-user__name">Imię</span>
+    <img alt="user" class="app-user__logo" src="images/account.png">
+  </div>
+</header>
+
+  <nav class="app-navigation">
+  <ul class="app-navigation__list">
+    <a class="app-navigation__anchor app-nav"
+       onclick="changeSelect(1)" href="#">
+      <li id="desktop" class="app-navigation__list__item app-navigation__list__item__selected">
+        Pulpit
+        <i class="fa-solid fa-angle-right app-navigation__icon"></i>
+      </li>
+    </a>
+    <a class="app-navigation__anchor app-nav" onclick="changeSelect(2)" href="#">
+      <li id="recipes" class="app-navigation__list__item">
+        Przepisy
+        <i class="fa-solid fa-angle-right hidden"></i>
+      </li>
+    </a>
+    <a class="app-navigation__anchor app-nav" onclick="changeSelect(3)" href="#">
+      <li id="plans" class="app-navigation__list__item">
+        Plany
+        <i class="fa-solid fa-angle-right hidden"></i>
+      </li>
+    </a>
+  </ul>
+</nav>
+
+  <div class="container">
+
+  <!--    login page-->
+    <div id="login-welcomepage" class="app-workspace__container app-login__welcomepage">
+      <h2>Witaj,</h2>
+      <h3>wygląda na to, że jesteś tutaj <br> pierwszy raz</h3>
+      <form id="login-form">
+        <input type="text" id="login-input" placeholder="tutaj wpisz jak masz na imię">
+        <button type="submit" class="btn">Gotowe!</button>
+        <p>Podaj nam swoje imię, a my zorganizujemy <br> dla Ciebie naszą aplikację :)</p>
+      </form>
+    </div>
+  <!--    after login page-->
+
+  <div id="main-workspace" class="app-workspace__container app-main__workspace hidden">
+    <!----------start add 2 button---------->
+    <section class="app-main">
+      <div id="add-recipe" class="app-add">
+        <div class="app-add__square">
+          <div class="app-add__square__cross__horizontal"></div>
+          <div class="app-add__square__cross__vertical"></div></div>
+        <span class="app-add__span">dodaj przepis</span>
+      </div>
+
+      <div id="add-plan" class="app-add">
+        <div class="app-add__square">
+          <div class="app-add__square__cross__horizontal"></div>
+          <div class="app-add__square__cross__vertical"></div></div>
+        <span class="app-add__span">dodaj plan</span>
+      </div>
+      <!----------end add 2 button---------->
+      <!----------start add messengers--------->
+      <div class="app-main__block">
+        <div class="app-main__block__info">
+          <div class="app-main__block__text">
+          <span class="app-main__block__info__icon">
+           <i class="fa-solid fa-circle-info"></i>
+          </span>
+            <span>Masz już <span id="reciptsNumber">0</span> przepisów, nieźle!</span>
+          </div>
+          <span class="app-main__block__info__xmark">
+            <i class="fa-solid fa-rectangle-xmark"></i>
+          </span>
+        </div>
+
+        <div class="app-main__block__warning">
+          <div class="app-main__block__text">
+          <span class="app-main__block__warning__icon">
+            <i class="fa-solid fa-circle-exclamation"></i>
+          </span>
+            <span>Pamiętaj, aby dodać plan!</span>
+          </div>
+          <span class="app-main__block__warning__xmark">
+            <i class="fa-solid fa-rectangle-xmark"></i>
+          </span>
+        </div>
+
+        <div class="app-main__block__correct">
+          <div class="app-main__block__text">
+           <span class="app-main__block__correct__icon">
+             <i class="fa-solid fa-circle-check"></i>
+           </span>
+            <span>Świetnie że jesteś! Udanego planowania i smacznego! :)</span>
+          </div>
+          <span class="app-main__block__correct__xmark">
+            <i class="fa-solid fa-rectangle-xmark"></i>
+          </span>
+        </div>
+      </div>
+    </section>
+        <!----------end add block--------->
+        <!-------------------table-------------------------->
+        <div class="app-main__table__block">
+        <table class="app-main__table">
+          <caption class="app-main__table__header">Dodaj nowy plan</caption>
+          <thead>
+          <tr>
+            <th>Poniedziałek</th>
+            <th>Wtorek</th>
+            <th>Środa</th>
+            <th>Czwartek</th>
+            <th>Piątek</th>
+            <th>Sobota</th>
+            <th>Niedziela</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td class="table__area"></td>
+            <td class="table__area"></td>
+            <td class="table__area"></td>
+            <td class="table__area"></td>
+            <td class="table__area"></td>
+            <td class="table__area"></td>
+            <td class="table__area"></td>
+          </tr>
+          <tr>
+            <td class="table__area"></td>
+            <td class="table__area"></td>
+            <td class="table__area"></td>
+            <td class="table__area"></td>
+            <td class="table__area"></td>
+            <td class="table__area"></td>
+            <td class="table__area"></td>
+          </tr>
+          <tr>
+            <td class="table__area"></td>
+            <td class="table__area"></td>
+            <td class="table__area"></td>
+            <td class="table__area"></td>
+            <td class="table__area"></td>
+            <td class="table__area"></td>
+            <td class="table__area"></td>
+          </tr>
+          <tr>
+            <td class="table__area"></td>
+            <td class="table__area"></td>
+            <td class="table__area"></td>
+            <td class="table__area"></td>
+            <td class="table__area"></td>
+            <td class="table__area"></td>
+            <td class="table__area"></td>
+          </tr>
+          <tr>
+            <td class="table__area"></td>
+            <td class="table__area"></td>
+            <td class="table__area"></td>
+            <td class="table__area"></td>
+            <td class="table__area"></td>
+            <td class="table__area"></td>
+            <td class="table__area"></td>
+          </tr>
+          </tbody>
+          </table>
+          <div class="app-main__table__button__block" onclick="desktopPlan()">
+            <div class="app-main__table__button__prev">
+            <span>
+              <i class="fa-solid fa-angles-left"></i>
+               <span>poprzedni</span>
+            </span>
+          </div>
+            <div class="app-main__table__button__next">
+            <span>
+               <span>następny</span>
+              <i class="fa-solid fa-angles-right"></i>
+            </span>
+            </div>
+          </div>
+        </div>
+        <!-------------------end table-------------------------->
+  </div>
+
+  <!--    adding new recipe-->
+
+    <div id="new-recipe-workspace" class="app-workspace__container app-workspace__header hidden">
+      <div class="app-workspace__header__head" >
+        <h2 class="app-workspace__header__title">NOWY PRZEPIS</h2>
+        <button id="save-recipe" class="btn btn-recipe-save">Zapisz i zamknij</button>
+      </div>
+      <div class="recipe-description">
+        <div class="recipe-description__part">
+          <h3>Nazwa przepisu</h3>
+          <input id="input-recipe-title" type="text" class="input-text-recipe" maxlength="50">
+        </div>
+        <div class="recipe-description__part">
+          <h3>Opis przepisu</h3>
+          <textarea id="input-recipe-description" type="text" class="input-textarea__description" maxlength="360"></textarea>
+        </div>
+      </div>
+      <div class="recipe-partials">
+        <div class="recipe-partials__instructions">
+          <h3>INSTRUKCJE</h3>
+          <div class="recipe-partials__instructions__inputs">
+            <textarea id="input-recipe-instructions" type="text" class="input-textarea__instructions" maxlength="150"></textarea>
+            <div id="button-recipe-add-instruction" class="green_plus_icon"></div>
+          </div>
+          <div class="recipe-partials__instructions__lists">
+            <ol id="list-of-instructions">
+
+            </ol>
+          </div>
+      </div>
+      <div class="recipe-partials__instructions">
+        <h3>SKŁADNIKI</h3>
+        <div class="recipe-partials__instructions__inputs">
+          <input id="input-recipe-ingredients"  type="text" class="input-text-ingredients" maxlength="50">
+          <div id="button-recipe-add-ingredient" class="green_plus_icon"></div>
+        </div>
+        <div class="recipe-partials__instructions__lists">
+          <ul id="list-of-ingredients">
+
+          </ul>
+        </div>
+      </div>
+      <div></div>
+    </div>
+  </div>
+
+  <!-----------------------------------recipe list----------------------------------------->
+
+  <div  id="recipes-workspace" class="app-workspace__container app-workspace__header hidden">
+    <div class="app-workspace__header__head" >
+      <h2 class="app-workspace__header__title">LISTA PRZEPISÓW</h2>
+      <div class="green_plus_icon"></div>
+    </div>
+
+    <table class="recipe_list__table">
+      <thead>
+      <tr >
+        <th>ID</th>
+        <th>NAZWA</th>
+        <th>OPIS</th>
+        <th>AKCJE</th>
+      </tr>
+      </thead>
+      <tbody id="recipe-list-table-body">
+      <!--      space for reccipes-->
+      </tbody>
+    </table>
+  </div>
+
+
+  <!-----------------------------------recipe list end----------------------------------------->
+
+  <!--    adding new plan-->
+
+  <div id="new-plan-workspace" class="app-workspace__container app-workspace__header hidden">
+    <div class="app-workspace__header__head" >
+      <h2 class="app-workspace__header__title">NOWY PLAN</h2>
+      <button id="plan-save" class="btn btn-recipe-save">Zapisz i zamknij</button>
+    </div>
+    <div class="recipe-description">
+      <div class="recipe-description__part">
+        <h3>Nazwa planu</h3>
+        <input id="input-plan-title" type="text" class="input-text-recipe" maxlength="50">
+      </div>
+      <div class="recipe-description__part">
+        <h3>Opis planu</h3>
+        <textarea id="input-plan-description" type="text" class="input-textarea__description" maxlength="360"></textarea>
+      </div>
+      <div class="recipe-description__part">
+        <h3>Numer tygodnia</h3>
+        <input id="input-week-number" type="text" class="input-week-number" maxlength="2">
+      </div>
+    </div>
+    <div class="plan-table-container">
+      <table class="plan-table">
+        <thead>
+        <tr>
+          <th></th>
+          <th class="plan-table__th-with-content">ŚNIADANIE</th>
+          <th class="plan-table__th-with-content">DRUGIE ŚNIADANIE</th>
+          <th class="plan-table__th-with-content">ZUPA</th>
+          <th class="plan-table__th-with-content">DRUGIE DANIE</th>
+          <th class="plan-table__th-with-content">KOLACJA</th>
+        </tr>
+        </thead>
+        <tbody class="plan-table__body">
+        <tr class="monday">
+          <td>PONIEDZIAŁEK</td>
+          <td>
+            <select class="plan-table-input"></select>
+          </td>
+          <td>
+            <select class="plan-table-input"></select>
+          </td>
+          <td>
+            <select class="plan-table-input"></select>
+          </td>
+          <td>
+            <select class="plan-table-input"></select>
+          </td>
+          <td>
+            <select class="plan-table-input"></select>
+          </td>
+        </tr>
+        <tr class="tuesday">
+          <td>WTOREK</td>
+          <td>
+            <select class="plan-table-input"></select>
+          </td>
+          <td>
+            <select class="plan-table-input"></select>
+          </td>
+          <td>
+            <select class="plan-table-input"></select>
+          </td>
+          <td>
+            <select class="plan-table-input"></select>
+          </td>
+          <td>
+            <select class="plan-table-input"></select>
+          </td>
+        </tr>
+        <tr class="wednesday">
+          <td>ŚRODA</td>
+          <td>
+            <select class="plan-table-input"></select>
+          </td>
+          <td>
+            <select class="plan-table-input"></select>
+          </td>
+          <td>
+            <select class="plan-table-input"></select>
+          </td>
+          <td>
+            <select class="plan-table-input"></select>
+          </td>
+          <td>
+            <select class="plan-table-input"></select>
+          </td>
+        </tr>
+        <tr class="thursday">
+          <td>CZWARTEK</td>
+          <td>
+            <select class="plan-table-input"></select>
+          </td>
+          <td>
+            <select class="plan-table-input"></select>
+          </td>
+          <td>
+            <select class="plan-table-input"></select>
+          </td>
+          <td>
+            <select class="plan-table-input"></select>
+          </td>
+          <td>
+            <select class="plan-table-input"></select>
+          </td>
+        </tr>
+        <tr class="friday">
+          <td>PIĄTEK</td>
+          <td>
+            <select class="plan-table-input"></select>
+          </td>
+          <td>
+            <select class="plan-table-input"></select>
+          </td>
+          <td>
+            <select class="plan-table-input"></select>
+          </td>
+          <td>
+            <select class="plan-table-input"></select>
+          </td>
+          <td>
+            <select class="plan-table-input"></select>
+          </td>
+        </tr>
+        <tr class="saturday">
+          <td>SOBOTA</td>
+          <td>
+            <select class="plan-table-input"></select>
+          </td>
+          <td>
+            <select class="plan-table-input"></select>
+          </td>
+          <td>
+            <select class="plan-table-input"></select>
+          </td>
+          <td>
+            <select class="plan-table-input"></select>
+          </td>
+          <td>
+            <select class="plan-table-input"></select>
+          </td>
+        </tr>
+        <tr class="sunday">
+          <td>NIEDZIELA</td>
+          <td>
+            <select class="plan-table-input"></select>
+          </td>
+          <td>
+            <select class="plan-table-input"></select>
+          </td>
+          <td>
+            <select class="plan-table-input"></select>
+          </td>
+          <td>
+            <select class="plan-table-input"></select>
+          </td>
+          <td>
+            <select class="plan-table-input"></select>
+          </td>
+        </tr>
+
+
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+
+  <!-----------------------------------new plan end----------------------------------------->
+
+    <div  id="plans-workspace" class="app-workspace__container app-workspace__header hidden">
+      <div class="app-workspace__header__head" >
+        <h2 class="app-workspace__header__title">LISTA PLANÓW</h2>
+        <div class="green_plus_icon"></div>
+      </div>
+
+      <table class="plan_list__table">
+        <thead>
+        <tr >
+          <th>ID</th>
+          <th>NAZWA</th>
+          <th>OPIS</th>
+          <th>TYDZIEŃ</th>
+          <th>AKCJE</th>
+        </tr>
+        </thead>
+        <tbody id="plan-list-table-body">
+        <!--      space for reccipes-->
+        </tbody>
+      </table>
+    </div>
+</div>
+
+
+<script src="./js/app.js"></script>
+</body>
+</html>
+

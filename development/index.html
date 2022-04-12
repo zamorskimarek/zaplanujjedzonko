@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Zaplanuj Jedzonko</title>
+    <meta name="description" content="Landing page for an app that allows you to plan your diet">
+    <meta name="author" content="Joanna Szczerbowska & Krystian Koscielecki & Marek Zamorski">
+    <meta property="og:title" content="Zaplanuj Jedzonko langing page">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header__container container">
+            <h1 class="logo">Zaplanuj <span>Jedzonko</span></h1>
+            <nav class="menu">
+                <ul class="menu__list">
+                    <li class="menu__list__item"><a href="app.html">ZAPLANUJ POSIŁKI!</a></li>
+                    <li class="menu__list__item"><a href="#about">DLACZEGO WARTO?</a></li>
+                    <li class="menu__list__item"><a href="#author">O MNIE</a></li>
+                    <li class="menu__list__item"><a href="#contact">KONTAKT</a></li>
+                </ul>
+            </nav>
+        </div>
+
+    </header>
+
+    <section class="carousel" aria-label="Gallery">
+        <div class="container">
+        <ol class="carousel__viewport">
+            <li id="carousel__slide1"
+                class="carousel__slide">
+                <div>
+                    <a href="#carousel__slide3" class="carousel__prev">Go to last slide</a>
+                    <h2>Lorem ipsum dolor sit amet</h2>
+                    <p>consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <a href="#carousel__slide2" class="carousel__next">Go to next slide</a>
+                </div>
+            </li>
+            <li id="carousel__slide2"
+                class="carousel__slide">
+                <div>
+                    <a href="#carousel__slide1" class="carousel__prev">Go to previous slide</a>
+                    <h2>Fusce gravida cursus arcu</h2>
+                    <p>sit amet lobortis. Nunc eu fermentum dui, a posuere nisi. Cras accumsan risus.</p>
+                    <a href="#carousel__slide3" class="carousel__next">Go to next slide</a>
+                </div>
+            </li>
+            <li id="carousel__slide3"
+                class="carousel__slide">
+                <div>
+                    <a href="#carousel__slide2" class="carousel__prev">Go to previous slide</a>
+                    <h2>Praesent accumsan dapibus mi</h2>
+                    <p>eget fringilla arcu mollis non. Mauris euismod volutpat arcu, ut tincidunt ex dignissim nec.</p>
+                    <a href="#carousel__slide1" class="carousel__next">Go to first slide</a>
+                </div>
+            </li>
+        </ol>
+        </div>
+    </section>
+
+
+    <section class="cta">
+        <div class="container cta__container">
+            <div class="cta__info">
+                <h3>Lorem ipsum dolor sit amet</h3>
+                <p>consectetur adipiscing elit. Duis commodo sem a purus maximus luctus.</p>
+            </div>
+            <a href="app.html"><div class="btn cta__btn">Lorem ipsum</div></a>
+        </div>
+
+    </section>
+    <section class="about_app" id="about">
+        <div class="container about_app__container">
+            <div class="about_app__info">
+                <h3 class="about_app__info--header">Lorem ipsum dolor sit amet</h3>
+                <p class="about_app__info--text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis commodo sem a purus maximus luctus. In luctus massa et risus feugiat, a posuere quam luctus. Aenean at leo libero.</p>
+            </div>
+            <div class="about_app__info">
+                <h3 class="about_app__info--header">Lorem ipsum dolor sit amet</h3>
+                <p class="about_app__info--text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis commodo sem a purus maximus luctus. In luctus massa et risus feugiat, a posuere quam luctus. Aenean at leo libero.</p>
+            </div>
+            <div class="about_app__info">
+                <h3 class="about_app__info--header">Lorem ipsum dolor sit amet</h3>
+                <p class="about_app__info--text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis commodo sem a purus maximus luctus. In luctus massa et risus feugiat, a posuere quam luctus. Aenean at leo libero.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="newsletter">
+        <div class="container newsletter__container">
+            <h3>Chcesz być na bieżąco?</h3>
+            <form class="newsletter__form">
+                <input type="email" class="newsletter__form--input">
+                <button type="submit" class="btn newsletter__form--btn">Zapisz się!</button>
+            </form>
+        </div>
+    </section>
+  
+    <section class="about_author" id="author">
+        <div class="container about_author__container">
+            <img alt="author" class="about_author__photo" src="images/author.png">
+            <div class="about_author__info">
+                <h3 class="about_author__info--name">Jagoda Iksińska</h3>
+                <p class="about_author__info--text">Jestem dietetykiem klinicznym i założycielką aplikacji <strong>Zaplanuj Jedzonko</strong>.
+                    Pomagam zmienić nawyki żywieniowe na lepsze, zadbać o zdrowie oraz uzyskać trwałe efekty w odchudzaniu.
+                    Na własnym przykładzie, przekonałam się, że dzięki odpowiednim modyfikacjom w diecie i stylu życia można cieszyć się zdrowiem oraz dobrym samopoczuciem przez wiele lat!
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container">
+        <div class="contact__column">
+            <h5 class="contact__column__header">Lorem ipsum dolor</h5>
+            <p class="contact__column__paragraph">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam iaculis fermentum risus sed condimentum.
+            </p>
+        </div>
+        <div class="contact__column">
+            <h5 class="contact__column__header">Lorem ipsum dolor</h5>
+            <ul class="contact__column__list">
+                <li class="contact__column__list__item">Lorem ipsum dolor </li>
+                <li class="contact__column__list__item">Donec non tortor </li>
+                <li class="contact__column__list__item">Nam non lorem nec </li>
+                <li class="contact__column__list__item">Etiam consectetur </li>
+            </ul>
+        </div>
+        <div class="contact__column">
+            <h5 class="contact__column__header">Lorem ipsum dolor</h5>
+            <form class="contact__column__form">
+                <input class="contact__column__form__input__text"  type="text">
+                <input class="btn contact__column__form__btn" type="submit" value="Lorem">
+            </form>
+            <div class="contact__column__icons">
+                <img class="contact__column__icons__img" src="images/facebook.png" alt="facebook">
+                <img class="contact__column__icons__img" src="images/twitter.png" alt="twitter">
+                <img class="contact__column__icons__img" src="images/instagram.png" alt="instagram">
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <footer class = "footer">
+        <span class="footer__copyright">Copyright </span><span class="footer__link"> ZaplanujJedzonko.pl</span>
+    </footer>
+
+<script src="js/main.js"></script>
+
+</body>
+</html>

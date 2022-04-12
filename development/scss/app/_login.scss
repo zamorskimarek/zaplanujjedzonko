@@ -1,0 +1,44 @@
+.app {
+    &-login__welcomepage {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-weight: $font-weight-semibold;
+        color: $color-side-panel-nav;
+        h2 {
+            padding-top: 100px;
+            font-size: 2.5714rem;
+        }
+        h3 {
+            font-size: 1.7142rem;
+            text-align: center;
+            padding-top: 20px;
+            line-height: 25px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 20px;
+            input {
+                width: 292px;
+                height: 30px;
+            }
+            button {
+                width: 126px;
+                height: 38px;
+                font-size: 1.4285rem;
+                margin-top: 20px;
+            }
+            p {
+                font-size: 1.4285rem;
+                text-align: center;
+                padding-top: 20px;
+                line-height: 30px;
+            }
+        }
+    }
+}
+
+
+

@@ -1,0 +1,37 @@
+.app {
+  &-navigation {
+    background-color: $color-side-panel-nav;
+    width: 235px;
+    height: calc(100vh - 80px);
+
+    &__anchor {
+      width: 100%;
+      height: 100%;
+      text-decoration: none;
+      color: $color-screen-background;
+      font-weight: $font-weight-regular;
+      font-size: 1.5714rem;
+    }
+
+    &__list__item {
+      width: 100%;
+      height: 75px;
+      padding: 25px;
+      position: relative;
+
+      &__selected {
+        border-left: solid 10px $color-buttons-distinction-and-screenheader;
+        }
+      }
+
+      &__icon {
+        position: absolute;
+        top: auto;
+        right: 20px;
+        color: $color-buttons-distinction-and-screenheader;
+      }
+    }
+  }
+
+
+

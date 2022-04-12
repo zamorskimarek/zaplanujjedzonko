@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Charmonman:wght@400;700&family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+$font-global: 'Open Sans', sans-serif; // all font weights available
+$font-logo: 'Charmonman', cursive; // only regular (400) and bold (700) font weight available
+
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+$font-weight-extrabold: 800;
+
+//to use in CSS/SCSS :
+//
+//font-family: 'Charmonman', cursive;
+//font-family: 'Open Sans', sans-serif;
